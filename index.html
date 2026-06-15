@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Guia Calvície</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+background:#050805;
+color:#fff;
+overflow-x:hidden;
+}
+
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+
+a{
+text-decoration:none;
+}
+
+
+
+/* FUNDO BRILHANTE */
+
+body:before{
+
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#7cff00;
+filter:blur(180px);
+opacity:.08;
+top:-200px;
+left:-200px;
+z-index:-1;
+
+}
+
+
+
+
+/* ANIMAÇÕES */
+
+@keyframes entrada{
+
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
+@keyframes subir{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+
+
+
+@keyframes brilho{
+
+0%{
+box-shadow:0 0 15px #7cff0055;
+}
+
+50%{
+box-shadow:0 0 45px #7cff00aa;
+}
+
+100%{
+box-shadow:0 0 15px #7cff0055;
+}
+
+}
+
+
+
+@keyframes pulsar{
+
+0%,100%{
+scale:1;
+}
+
+50%{
+scale:1.05;
+}
+
+}
+
+
+
+
+.animate{
+
+animation:
+entrada 1s ease forwards,
+subir 5s ease-in-out infinite;
+
+}
+
+
+
+
+/* BOTÃO */
+
+.btn{
+
+display:inline-block;
+background:#7cff00;
+color:#050805;
+padding:20px 45px;
+border-radius:60px;
+font-weight:bold;
+font-size:18px;
+animation:brilho 2s infinite;
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 0;
+
+}
+
+
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+
+
+.hero h1{
+
+font-size:60px;
+line-height:1;
+margin-bottom:25px;
+animation:entrada 1s;
+
+}
+
+
+.green{
+
+color:#7cff00;
+
+}
+
+
+.hero p{
+
+font-size:20px;
+color:#ddd;
+margin-bottom:35px;
+animation:entrada 1.3s;
+
+}
+
+
+
+
+/* PRODUTO */
+
+
+.product{
+
+animation:
+entrada 1.5s,
+subir 5s infinite;
+
+}
+
+
+.product img{
+
+width:100%;
+max-width:520px;
+border-radius:25px;
+filter:drop-shadow(0 0 40px #7cff00);
+animation:brilho 3s infinite;
+
+}
+
+
+
+
+/* CONTEÚDO */
+
+
+.title{
+
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+animation:entrada 1s;
+
+}
+
+
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:#101710;
+padding:35px;
+border-radius:25px;
+border:1px solid #263526;
+transition:.4s;
+animation:
+entrada 1s,
+subir 6s infinite;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-15px);
+border-color:#7cff00;
+
+}
+
+
+
+.icon-box{
+
+width:65px;
+height:65px;
+border-radius:18px;
+background:#7cff0015;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:25px;
+animation:pulsar 3s infinite;
+
+}
+
+
+
+svg{
+
+width:35px;
+height:35px;
+fill:#7cff00;
+
+}
+
+
+
+.card h3{
+
+color:#7cff00;
+margin-bottom:15px;
+
+}
+
+
+.card p{
+
+color:#aaa;
+
+}
+
+
+
+/* OFERTA */
+
+
+.offer{
+
+padding:100px 0;
+
+}
+
+
+.offer-box{
+
+max-width:700px;
+margin:auto;
+background:#111;
+padding:60px 30px;
+text-align:center;
+border-radius:30px;
+animation:
+entrada 1s,
+brilho 3s infinite;
+
+}
+
+
+
+.price{
+
+font-size:75px;
+font-weight:bold;
+color:#7cff00;
+margin:25px 0;
+animation:pulsar 2s infinite;
+
+}
+
+
+
+.offer-box p{
+
+color:#ddd;
+margin-bottom:30px;
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.hero-grid{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+.product img{
+
+max-width:350px;
+
+}
+
+
+.price{
+
+font-size:50px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+
+
+<div>
+
+
+<h1>
+
+COMO TRATAR DA
+
+<span class="green">
+CALVÍCIE
+</span>
+
+</h1>
+
+
+<p>
+
+Guia digital completo com estratégias,
+cuidados e informações para melhorar
+a saúde dos seus cabelos.
+
+</p>
+
+
+<a class="btn" href="https://atlaspaybr.lovable.app/c/mwzvfy59gn">
+
+QUERO MEU ACESSO
+
+</a>
+
+
+</div>
+
+
+
+
+<div class="product">
+
+<img src="https://cdn.discordapp.com/attachments/1499872456968507405/1516133280137740339/file_000000003290720eace7d5785ec30e9e.png?ex=6a3188a6&is=6a303726&hm=bf1dfc02a424cee7a39b15b795470059cd68bf61e21b6109f64547ae392a0286&">
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<h2 class="title">
+
+O que você vai aprender
+
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="icon-box">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm2-7-1 1v2h-2v-3l1.5-1.5A1.5 1.5 0 1 0 10 8H8a4 4 0 1 1 7 2z"/>
+
+</svg>
+
+</div>
+
+
+<h3>Diagnóstico</h3>
+
+<p>
+Entenda as causas da queda capilar e identifique os sinais.
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="icon-box">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+
+</svg>
+
+</div>
+
+
+<h3>Cuidados Diários</h3>
+
+<p>
+Aprenda hábitos para fortalecer e cuidar dos fios.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="icon-box">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 2 4 12l8 10 8-10z"/>
+
+</svg>
+
+</div>
+
+
+<h3>Estratégias Naturais</h3>
+
+<p>
+Conheça práticas simples para sua rotina capilar.
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="offer">
+
+
+<div class="offer-box">
+
+
+<h2>
+
+Oferta especial
+
+</h2>
+
+
+<div class="price">
+
+R$ 38,90
+
+</div>
+
+
+<p>
+
+Acesso imediato ao guia completo.
+
+</p>
+
+
+<a class="btn" href="https://atlaspaybr.lovable.app/c/mwzvfy59gn">
+
+COMPRAR AGORA
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+</body>
+</html>
